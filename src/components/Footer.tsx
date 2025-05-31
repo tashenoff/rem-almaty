@@ -58,7 +58,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-white/10">
           <p className="text-center text-sm text-white/80">
-            © {new Date().getFullYear()} РемБытТехника. Все права защищены.
+            © {new Date().getFullYear()} Tehno-Sfera.kz Все права защищены.
           </p>
         </div>
       </div>

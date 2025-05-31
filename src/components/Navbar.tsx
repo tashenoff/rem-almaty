@@ -10,16 +10,16 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
-              <div className="flex items-center justify-center">
+          <div className="flex-shrink-0 flex items-center">
+            <Link to="/" className="flex items-center gap-4">
+              <div className="h-12 w-12 flex items-center justify-center">
                 <img 
                   src="/images/logo.svg" 
                   alt="REM ALMATY" 
-                  className="h-[40px] w-[40px]"
+                  className="h-full w-full object-contain"
                 />
               </div>
-              <span className="ml-3 font-medium text-xl text-gray-900 translate-y-[1px]">
+              <span className="font-medium text-xl text-gray-900">
                 tehno-sfera.kz
               </span>
             </Link>
