@@ -10,8 +10,8 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-white">Контакты</h3>
             <div className="space-y-3">
               <p>
-                <a href="tel:+77771234567" className="hover:text-white/80">
-                  +7 777 123 45 67
+                <a href="tel:+77073970675" className="hover:text-white/80">
+                  +7 707 397 06 75
                 </a>
               </p>
               <p>info@rembytovoi.kz</p>

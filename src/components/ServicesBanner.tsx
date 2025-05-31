@@ -18,13 +18,13 @@ const ServicesBanner = () => {
         </p>
         <div className="flex justify-center space-x-4">
           <a
-            href="tel:+77771234567"
+            href="tel:+77073970675"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-accent bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors duration-300"
           >
             Позвонить сейчас
           </a>
           <a
-            href="https://wa.me/77771234567"
+            href="https://wa.me/77073970675"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors duration-300"

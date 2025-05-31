@@ -5,8 +5,8 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const phoneNumber = '+7 777 123 45 67';
-  const whatsappLink = 'https://wa.me/77771234567';
+  const phoneNumber = '+7 707 397 06 75';
+  const whatsappLink = 'https://wa.me/77073970675';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,11 +43,11 @@ const Navigation = () => {
             <Link to="/contacts" className="text-gray-900 hover:text-accent">
               Контакты
             </Link>
-            <a href="tel:+77771234567" className="text-gray-900 hover:text-accent">
-              +7 777 123 45 67
+            <a href="tel:+77073970675" className="text-gray-900 hover:text-accent">
+              +7 707 397 06 75
             </a>
             <a
-              href="https://wa.me/77771234567"
+              href="https://wa.me/77073970675"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-accent hover:bg-accent-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent transition-colors duration-300"
@@ -103,13 +103,13 @@ const Navigation = () => {
               Контакты
             </Link>
             <a
-              href="tel:+77771234567"
+              href="tel:+77073970675"
               className="block px-3 py-2 text-gray-900 hover:text-accent"
             >
-              +7 777 123 45 67
+              +7 707 397 06 75
             </a>
             <a
-              href="https://wa.me/77771234567"
+              href="https://wa.me/77073970675"
               target="_blank"
               rel="noopener noreferrer"
               className="block px-3 py-2 text-white bg-accent hover:bg-accent-dark rounded-md"

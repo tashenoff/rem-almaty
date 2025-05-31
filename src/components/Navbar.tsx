@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const phoneNumber = '+7 707 777 77 77';
+  const phoneNumber = '+7 707 397 06 75';
   const whatsappLink = `https://wa.me/${phoneNumber.replace(/\D/g, '')}`;
 
   return (

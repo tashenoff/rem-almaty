@@ -6,7 +6,7 @@ interface CTABannerProps {
 }
 
 const CTABanner = ({ title, serviceTitle }: CTABannerProps) => {
-  const phoneNumber = '+7 707 777 77 77';
+  const phoneNumber = '+7 707 397 06 75';
   const whatsappLink = `https://wa.me/${phoneNumber.replace(/\D/g, '')}`;
   
   const defaultTitle = serviceTitle 
