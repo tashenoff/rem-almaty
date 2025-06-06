@@ -35,7 +35,7 @@ export const GoogleAnalytics = () => {
       };
       if (typeof window.gtag === 'function') {
         window.gtag('event', 'conversion', {
-          'send_to': 'AW-17137992121/lqbDCNuc49QaELmDhOw_',
+          'send_to': 'AW-17137992121/Lo3xCP6H7tQaELmDhOw_',
           'event_callback': callback
         });
       }
