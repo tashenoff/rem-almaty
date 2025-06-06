@@ -1,4 +1,5 @@
 import React from 'react';
+import { TrackPhoneLink } from '../components/TrackPhoneLink';
 
 const ContactPage = () => {
   return (
@@ -48,9 +49,9 @@ const ContactPage = () => {
                       />
                     </svg>
                     <span className="ml-3">
-                      <a href="tel:+77777777777" className="hover:text-gray-900">
+                      <TrackPhoneLink phone="+77777777777" className="hover:text-gray-900">
                         +7 (777) 777-77-77
-                      </a>
+                      </TrackPhoneLink>
                     </span>
                   </dd>
                 </div>

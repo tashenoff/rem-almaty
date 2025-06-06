@@ -1,4 +1,5 @@
 import React from 'react';
+import { TrackPhoneLink } from './TrackPhoneLink';
 
 const ServicesBanner = () => {
   return (
@@ -17,12 +18,12 @@ const ServicesBanner = () => {
           Профессиональный ремонт холодильников, стиральных машин и другой бытовой техники с гарантией качества
         </p>
         <div className="flex justify-center space-x-4">
-          <a
-            href="tel:+77073970675"
+          <TrackPhoneLink
+            phone="+77073970675"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-accent bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors duration-300"
           >
             Позвонить сейчас
-          </a>
+          </TrackPhoneLink>
           <a
             href="https://wa.me/77073970675"
             target="_blank"

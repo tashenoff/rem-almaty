@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { TrackPhoneLink } from './TrackPhoneLink';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,9 +44,9 @@ const Navigation = () => {
             <Link to="/contacts" className="text-gray-900 hover:text-accent">
               Контакты
             </Link>
-            <a href="tel:+77073970675" className="text-gray-900 hover:text-accent">
-              +7 707 397 06 75
-            </a>
+            <TrackPhoneLink phone={phoneNumber} className="text-gray-900 hover:text-accent">
+              {phoneNumber}
+            </TrackPhoneLink>
             <a
               href="https://wa.me/77073970675"
               target="_blank"
@@ -102,12 +103,9 @@ const Navigation = () => {
             >
               Контакты
             </Link>
-            <a
-              href="tel:+77073970675"
-              className="block px-3 py-2 text-gray-900 hover:text-accent"
-            >
-              +7 707 397 06 75
-            </a>
+            <TrackPhoneLink phone={phoneNumber} className="block px-3 py-2 text-gray-900 hover:text-accent">
+              {phoneNumber}
+            </TrackPhoneLink>
             <a
               href="https://wa.me/77073970675"
               target="_blank"

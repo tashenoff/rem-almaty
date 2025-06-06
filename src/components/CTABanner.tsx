@@ -1,4 +1,5 @@
 import React from 'react';
+import { TrackPhoneLink } from './TrackPhoneLink';
 
 interface CTABannerProps {
   title?: string;
@@ -33,8 +34,8 @@ const CTABanner = ({ title, serviceTitle }: CTABannerProps) => {
             </h2>
             <div className="mt-8 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
               {/* Телефон */}
-              <a
-                href={`tel:${phoneNumber}`}
+              <TrackPhoneLink
+                phone={phoneNumber}
                 className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-accent bg-white hover:bg-gray-50 transition-colors duration-300 w-full sm:w-auto"
               >
                 <svg
@@ -52,7 +53,7 @@ const CTABanner = ({ title, serviceTitle }: CTABannerProps) => {
                   />
                 </svg>
                 {phoneNumber}
-              </a>
+              </TrackPhoneLink>
 
               {/* WhatsApp */}
               <a
