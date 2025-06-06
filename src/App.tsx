@@ -6,10 +6,12 @@ import ServicesPage from './pages/ServicesPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import { GoogleAnalytics } from './components/GoogleAnalytics';
 
 const App = () => {
   return (
     <Router>
+      <GoogleAnalytics />
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />

@@ -46,14 +46,14 @@ const Footer = () => {
           </div>
 
           {/* Режим работы */}
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Режим работы</h3>
             <div className="space-y-3">
               <p>Пн-Пт: 9:00 - 20:00</p>
               <p>Сб: 10:00 - 18:00</p>
               <p>Вс: 10:00 - 16:00</p>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/10">
