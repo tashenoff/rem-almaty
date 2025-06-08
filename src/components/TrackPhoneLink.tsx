@@ -9,7 +9,7 @@ interface TrackPhoneLinkProps {
 export const TrackPhoneLink: React.FC<TrackPhoneLinkProps> = ({ phone, children, className }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (typeof window !== 'undefined' && typeof window.gtag_report_conversion === 'function') {
-      window.gtag_report_conversion();
+      window.gtag_report_conversion(undefined, 'AW-17137992121/lqbDCNuc49QaELmDhOw_');
     }
     // переход по tel-ссылке произойдет автоматически
   };

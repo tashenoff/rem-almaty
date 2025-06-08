@@ -4,7 +4,7 @@ declare global {
   interface Window {
     dataLayer: any[];
     gtag: (...args: any[]) => void;
-    gtag_report_conversion?: (url?: string) => boolean;
+    gtag_report_conversion?: (url?: string, sendTo?: string) => boolean;
   }
 }
 
@@ -26,16 +26,16 @@ export const GoogleAnalytics = () => {
     document.head.appendChild(gtagScript);
     document.head.appendChild(configScript);
 
-    // gtag_report_conversion function
-    window.gtag_report_conversion = function(url) {
+    // Универсальная функция для разных конверсий
+    window.gtag_report_conversion = function(url, sendTo) {
       var callback = function () {
         if (typeof(url) !== 'undefined') {
           (window.location as any) = url;
         }
       };
-      if (typeof window.gtag === 'function') {
+      if (typeof window.gtag === 'function' && sendTo) {
         window.gtag('event', 'conversion', {
-          'send_to': 'AW-17137992121/Lo3xCP6H7tQaELmDhOw_',
+          'send_to': sendTo,
           'event_callback': callback
         });
       }
