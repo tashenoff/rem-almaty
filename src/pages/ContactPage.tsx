@@ -1,7 +1,29 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { TrackPhoneLink } from '../components/TrackPhoneLink';
 
+const WHATSAPP_NUMBER = '77073970675';
+
 const ContactPage = () => {
+  const nameRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const name = nameRef.current?.value || '';
+    const phone = phoneRef.current?.value || '';
+    const message = messageRef.current?.value || '';
+    const text =
+      `Имя: ${name}%0A` +
+      `Телефон: ${phone}%0A` +
+      `Сообщение: ${message}`;
+    const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(waLink, '_blank');
+    if (typeof window !== 'undefined' && typeof window.gtag_report_conversion === 'function') {
+      window.gtag_report_conversion(undefined, 'AW-17137992121/Lo3xCP6H7tQaELmDhOw_');
+    }
+  };
+
   return (
     <div className="bg-gray-50">
       {/* Hero section */}
@@ -13,9 +35,6 @@ const ContactPage = () => {
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Контакты
           </h1>
-          <p className="mt-6 text-xl text-white max-w-3xl">
-            Свяжитесь с нами любым удобным способом. Мы работаем ежедневно с 8:00 до 22:00
-          </p>
         </div>
       </div>
 
@@ -49,8 +68,8 @@ const ContactPage = () => {
                       />
                     </svg>
                     <span className="ml-3">
-                      <TrackPhoneLink phone="+77777777777" className="hover:text-gray-900">
-                        +7 (777) 777-77-77
+                      <TrackPhoneLink phone="+77073970675" className="hover:text-gray-900">
+                        +7 707 397 06 75
                       </TrackPhoneLink>
                     </span>
                   </dd>
@@ -74,7 +93,7 @@ const ContactPage = () => {
                     </svg>
                     <span className="ml-3">
                       <a
-                        href="https://wa.me/77777777777"
+                        href="https://wa.me/77073970675"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-gray-900"
@@ -84,39 +103,12 @@ const ContactPage = () => {
                     </span>
                   </dd>
                 </div>
-                <div className="mt-3">
-                  <dt className="sr-only">Email</dt>
-                  <dd className="flex">
-                    <svg
-                      className="flex-shrink-0 h-6 w-6 text-gray-400"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
-                    <span className="ml-3">
-                      <a
-                        href="mailto:info@remalmaty.kz"
-                        className="hover:text-gray-900"
-                      >
-                        info@remalmaty.kz
-                      </a>
-                    </span>
-                  </dd>
-                </div>
               </dl>
             </div>
           </div>
           <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
             <div className="max-w-lg mx-auto lg:max-w-none">
-              <form action="#" method="POST" className="grid grid-cols-1 gap-y-6">
+              <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-y-6">
                 <div>
                   <label htmlFor="name" className="sr-only">
                     Имя
@@ -128,6 +120,7 @@ const ContactPage = () => {
                     autoComplete="name"
                     className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-accent focus:border-accent border-gray-300 rounded-md"
                     placeholder="Ваше имя"
+                    ref={nameRef}
                   />
                 </div>
                 <div>
@@ -141,6 +134,7 @@ const ContactPage = () => {
                     autoComplete="tel"
                     className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-accent focus:border-accent border-gray-300 rounded-md"
                     placeholder="Ваш телефон"
+                    ref={phoneRef}
                   />
                 </div>
                 <div>
@@ -153,6 +147,7 @@ const ContactPage = () => {
                     rows={4}
                     className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-accent focus:border-accent border-gray-300 rounded-md"
                     placeholder="Опишите проблему"
+                    ref={messageRef}
                   ></textarea>
                 </div>
                 <div>
