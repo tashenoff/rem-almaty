@@ -7,11 +7,13 @@ import ServiceDetailPage from './pages/ServiceDetailPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import { GoogleAnalytics } from './components/GoogleAnalytics';
+import { YandexMetrika } from './components/YandexMetrika';
 
 const App = () => {
   return (
     <Router>
       <GoogleAnalytics />
+      <YandexMetrika />
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
