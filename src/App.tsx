@@ -8,6 +8,7 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import { GoogleAnalytics } from './components/GoogleAnalytics';
 import { YandexMetrika } from './components/YandexMetrika';
+import { FloatingPhoneButton } from './components/FloatingPhoneButton';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
+        <FloatingPhoneButton />
       </Layout>
     </Router>
   );

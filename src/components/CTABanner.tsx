@@ -10,9 +10,10 @@ const CTABanner = ({ title, serviceTitle }: CTABannerProps) => {
   const phoneNumber = '+7 707 397 06 75';
   const whatsappLink = `https://wa.me/${phoneNumber.replace(/\D/g, '')}`;
   
-  const defaultTitle = serviceTitle 
-    ? `Нужен ремонт ${serviceTitle.toLowerCase()}?`
-    : 'Нужна помощь с ремонтом?';
+  let defaultTitle = 'Нужна помощь с ремонтом?';
+  if (serviceTitle) {
+    defaultTitle = `Нужен ${serviceTitle.charAt(0).toLowerCase() + serviceTitle.slice(1)}?`;
+  }
 
   return (
     <div 

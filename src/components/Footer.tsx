@@ -3,7 +3,7 @@ import { TrackPhoneLink } from './TrackPhoneLink';
 
 const Footer = () => {
   return (
-    <footer className="bg-accent text-white">
+    <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Контакты */}
@@ -15,14 +15,14 @@ const Footer = () => {
                   +7 707 397 06 75
                 </TrackPhoneLink>
               </p>
-              <p>info@rembytovoi.kz</p>
+              
             </div>
           </div>
 
           {/* Услуги */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Услуги</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 list-disc list-inside">
               <li>
                 <Link to="/services/refrigerators" className="hover:text-white/80">
                   Ремонт холодильников
