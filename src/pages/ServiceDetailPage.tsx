@@ -120,6 +120,11 @@ const ServiceDetailPage = () => {
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
             {service.title}
           </h1>
+          {id === 'refrigerators' && (
+            <div className="mt-4 inline-block bg-black text-white font-extrabold text-2xl rounded-lg px-3 py-1 shadow-md">
+              от <span className="ml-1">2500 ₸</span>
+            </div>
+          )}
           <p className="mt-6 text-xl text-white max-w-3xl">
             {service.description}
           </p>
